@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "5c62a36a-3c37-439e-8f29-e02f410c932d",
+		"name": "SMSBillingSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Generate bill for Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/smsService/bill?CustomerName=Bank",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smsService",
+						"bill"
+					],
+					"query": [
+						{
+							"key": "CustomerName",
+							"value": "Bank"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/smsService/Add?CustomerName=Shop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smsService",
+						"Add"
+					],
+					"query": [
+						{
+							"key": "CustomerName",
+							"value": "Shop"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send SMS message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "very good girl"
+				},
+				"url": {
+					"raw": "http://localhost:8080/smsService/SMS?CustomerName=Bank",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smsService",
+						"SMS"
+					],
+					"query": [
+						{
+							"key": "CustomerName",
+							"value": "Bank"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
